@@ -1,0 +1,2 @@
+#! /bin/bash
+curl https://magazinesummit.jp/ | sed 's/<[^>]*>//g' | sed 's/ //g'| sed 's/　//g' | grep -v '^\s*$' | grep -e [ぁ-ん] -e [ァ-ン] -e [亜-熙] -e NEW | grep -v "^<" | grep -v ">$"  > magazinesummit.txt
